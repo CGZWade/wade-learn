@@ -25,7 +25,7 @@ public class PaymentController {
         int result = paymentService.create(payment);
         System.out.println("新增：" + serverPort);
         if (result > 0) {
-            return new CommonResult<>(200, "新增成功：" + serverPort, result);
+            return new CommonResult<>(200, "新增成功", result);
         } else {
             return new CommonResult<>(201, "新增失败");
         }
