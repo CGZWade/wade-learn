@@ -9,9 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-payment-8004</artifactId>
+    <artifactId>cloud-provider-payment-consul-8006</artifactId>
 
     <dependencies>
+        <!--consul-discovery-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.wade.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
@@ -26,11 +32,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
         </dependency>
 
         <dependency>
