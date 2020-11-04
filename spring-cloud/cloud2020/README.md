@@ -23,3 +23,8 @@ https://www.bilibili.com/video/BV18E411x7eT
 
    CP：Zookeeper、Consul
 
+
+
+### Ribbon
+
+1.  已经结合在eureka中
