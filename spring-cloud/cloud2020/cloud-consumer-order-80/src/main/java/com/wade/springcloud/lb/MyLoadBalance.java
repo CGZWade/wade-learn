@@ -31,7 +31,7 @@ public class MyLoadBalance implements LoadBalance {
      */
     @Override
     public ServiceInstance instance(List<ServiceInstance> serviceInstances) {
-        //得到服务器的下标位置
+        // 得到服务器的下标位置
         int index = getAndIncrement() % serviceInstances.size();
         return serviceInstances.get(index);
     }
