@@ -15,7 +15,7 @@ public class PaymentController {
     private String serverPort;
 
     @GetMapping(value = "/consul")
-    public String paymentzk() {
+    public String paymentConsul() {
         return "spring-cloud with consul:" + serverPort + "\t" + UUID.randomUUID().toString();
     }
 
