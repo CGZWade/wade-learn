@@ -9,14 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-payment-hystrix-8001</artifactId>
-
+    <artifactId>cloud-consumer-order-feign-hystrix-80</artifactId>
 
     <dependencies>
         <!--新增hystrix-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <dependency>
@@ -61,4 +65,3 @@
     </dependencies>
 
 </project>
-
