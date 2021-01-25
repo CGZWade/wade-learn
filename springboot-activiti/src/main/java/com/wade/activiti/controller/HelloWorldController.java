@@ -1,5 +1,6 @@
 package com.wade.activiti.controller;
 
+import com.wade.activiti.entity.Activiti;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @GetMapping("/cgz")
-    public String helloWorld() {
-        return "hello world!";
+    public Activiti helloWorld() {
+        Activiti activiti = new Activiti();
+        activiti.setName("hello world!");
+        return activiti;
     }
 
 }
