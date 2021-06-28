@@ -3,6 +3,7 @@ package com.wade.springcloud.controller;
 import com.wade.springcloud.entity.CommonResult;
 import com.wade.springcloud.entity.Payment;
 import com.wade.springcloud.lb.LoadBalance;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import javax.annotation.Resource;
 import java.net.URI;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/consumer")
 public class OrderController {
@@ -51,8 +53,8 @@ public class OrderController {
     public CommonResult<Payment> getPayment2(@PathVariable("id") Long id) {
         ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
         if (entity.getStatusCode().is2xxSuccessful()) {
-            entity.getStatusCode();
-            entity.getHeaders();
+            log.info(entity.getStatusCode().toString());
+            log.info(entity.getHeaders().toString());
             return entity.getBody();
         } else {
             return new CommonResult<>(444, "操作失败");
