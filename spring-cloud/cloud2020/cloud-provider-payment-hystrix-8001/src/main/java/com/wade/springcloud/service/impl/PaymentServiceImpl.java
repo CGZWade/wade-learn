@@ -21,7 +21,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     /**
-     * 失败
+     * 设置超时时长为5秒，如果超过走 paymentInfo_TimeOutHandler 方法
      */
     @Override
     @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler",
