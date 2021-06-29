@@ -53,8 +53,8 @@ public class OrderController {
     public CommonResult<Payment> getPayment2(@PathVariable("id") Long id) {
         ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
         if (entity.getStatusCode().is2xxSuccessful()) {
-            log.info(entity.getStatusCode().toString());
-            log.info(entity.getHeaders().toString());
+            entity.getStatusCode();
+            entity.getHeaders();
             return entity.getBody();
         } else {
             return new CommonResult<>(444, "操作失败");
