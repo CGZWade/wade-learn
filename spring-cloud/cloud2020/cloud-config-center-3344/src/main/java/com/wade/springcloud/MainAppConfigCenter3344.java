@@ -2,16 +2,13 @@ package com.wade.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-/**
- * @Description
- * @Author CGZ
- * @Date 2021/7/1
- */
 @SpringBootApplication
+@EnableConfigServer
 public class MainAppConfigCenter3344 {
 
-    // TODO maven spring-cloud-config-server 导入失败
+    // 127.0.0.1 config-3344.com
     public static void main(String[] args) {
         SpringApplication.run(MainAppConfigCenter3344.class);
     }

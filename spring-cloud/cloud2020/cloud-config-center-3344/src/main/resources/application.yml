@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri:  git@github.com:CGZWade/springcloud-config.git #github路径
+          uri: https://github.com/CGZWade/springcloud-config.git #github路径
           search-paths:
             - springcloud-config #搜索目录
       label: master #读取分支
