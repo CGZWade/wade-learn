@@ -10,8 +10,15 @@ spring:
       name: config
       profile: dev
       uri: http://localhost:3344
+
 eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
 
+# 暴露监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
