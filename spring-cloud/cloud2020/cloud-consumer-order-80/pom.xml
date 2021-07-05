@@ -12,12 +12,19 @@
     <artifactId>cloud-consumer-order-80</artifactId>
 
     <dependencies>
+        <!--引入zipkin链路监控使用，包含了sleuth+zipkin -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <!--引入通用包-->
         <dependency>
             <groupId>com.wade.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

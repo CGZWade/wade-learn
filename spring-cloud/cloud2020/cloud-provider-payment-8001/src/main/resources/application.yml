@@ -10,6 +10,11 @@ spring:
     url: jdbc:mysql://localhost:3306/db2019?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: root
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 # 采样率值介于0到1之间，1则标识全部采集
 
 eureka:
   client:
