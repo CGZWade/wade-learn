@@ -11,7 +11,9 @@ spring:
       config:
         server-addr: localhost:8848 #Bacos配置中心地址
         file-extension: yaml #指定yaml格式的配置
+        group: TEST_GROUP # 指定分组名称
+        namespace: 4f2b3ac9-b5a3-4f09-b745-63b817fccba2 # 指定命名空间
 
 
-# 到Nacos配置列表配置：（公式：${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.file-extension}）
+  # 到Nacos配置列表配置：（公式：${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.file-extension}）
   # Data ID: nacos-config-client-dev.yaml
